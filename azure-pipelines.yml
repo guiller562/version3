@@ -27,6 +27,14 @@ steps:
   inputs:
     version: 6.x
     performMultiLevelLookup: true
+
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'version2'
+    scannerMode: 'MSBuild'
+    projectKey: 'sonar15_prueba'
+    projectName: 'prueba'
+
 #Construyeelproyecto
 - task: DotNetCoreCLI@2
   displayName: Build
