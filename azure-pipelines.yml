@@ -68,6 +68,11 @@ steps:
     testRunner: VSTest
     testResultsFiles: '**/*.trx'
 
+- task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_11_X64'
+
+
  #Recuperar Cobertura de código 
 # do this after other tasks such as building
 - task: DotNetCoreCLI@2
