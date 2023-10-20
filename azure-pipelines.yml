@@ -30,7 +30,7 @@ steps:
 
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'miproyecto'
+    SonarQube: 'sonar15'
     scannerMode: 'MSBuild'
     projectKey: 'sonar15_miproyecto'
     projectName: 'miproyecto'
