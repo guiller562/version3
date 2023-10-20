@@ -27,10 +27,9 @@ steps:
   inputs:
     version: 6.x
     performMultiLevelLookup: true
-
 - task: SonarQubePrepare@5
   inputs:
-    SonarQube: 'sonar15'
+    SonarQube: 'miproyecto'
     scannerMode: 'MSBuild'
     projectKey: 'sonar15_miproyecto'
     projectName: 'miproyecto'
