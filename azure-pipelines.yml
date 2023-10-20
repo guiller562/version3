@@ -72,6 +72,10 @@ steps:
     jdkversion: 'JAVA_HOME_11_X64'
 
 
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
+
  #Recuperar Cobertura de código 
 # do this after other tasks such as building
 - task: DotNetCoreCLI@2
@@ -89,9 +93,6 @@ steps:
     testResultsFiles: '**/*.trx'
 
 
-- task: SonarQubePublish@5
-  inputs:
-    pollingTimeoutSec: '300'
 
 
 
