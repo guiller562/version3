@@ -36,7 +36,6 @@ steps:
     projectKey: 'sonar15_miproyecto' # Reemplaza con la clave de tu proyecto de SonarCloud
     projectName: 'miproyecto' # Reemplaza con el nombre de tu proyecto
 
-
 #Construyeelproyecto
 - task: DotNetCoreCLI@2
   displayName: Build
