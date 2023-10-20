@@ -29,7 +29,7 @@ steps:
     performMultiLevelLookup: true
 - task: SonarCloudPrepare@1
   inputs:
-   SonarCloud: 'miproyecto'
+    SonarCloud: 'miproyecto'
     organization: 'sonar15'
     scannerMode: 'MSBuild'
     projectKey: 'sonar15_miproyecto'
