@@ -27,12 +27,14 @@ steps:
   inputs:
     version: 6.x
     performMultiLevelLookup: true
-- task: SonarQubePrepare@5
+- task: SonarCloudPrepare@1
   inputs:
-    SonarQube: 'miproyecto'
+   SonarCloud: 'miproyecto'
+    organization: 'sonar15'
     scannerMode: 'MSBuild'
     projectKey: 'sonar15_miproyecto'
     projectName: 'miproyecto'
+
 
 #Construyeelproyecto
 - task: DotNetCoreCLI@2
