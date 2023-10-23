@@ -28,6 +28,10 @@ steps:
     version: 6.x
     performMultiLevelLookup: true
 
+
+
+
+#sonar
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'miproyecto'
