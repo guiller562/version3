@@ -30,11 +30,12 @@ steps:
 
 - task: SonarCloudPrepare@1
   inputs:
-    SonarCloud: 'sonarcloud'
-    organization: 'sonar15' # Reemplaza con la clave de tu organización de SonarCloud
+    SonarCloud: 'miproyecto'
+    organization: 'sonar15'
     scannerMode: 'MSBuild'
-    projectKey: 'sonar15_miproyecto' # Reemplaza con la clave de tu proyecto de SonarCloud
-    projectName: 'miproyecto' # Reemplaza con el nombre de tu proyecto
+    projectKey: 'sonar15_miproyecto'
+    projectName: 'miproyecto'
+
 
 #Construyeelproyecto
 - task: DotNetCoreCLI@2
@@ -87,14 +88,12 @@ steps:
     testResultsFiles: '**/*.trx'
 
 
-
-
-- task: SonarQubeAnalyze@5
+- task: SonarCloudAnalyze@1
   inputs:
-    jdkversion: 'JAVA_HOME_11_X64'
+    jdkversion: 'JAVA_HOME_17_X64'
 
 
-- task: SonarQubePublish@5
+- task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
 
