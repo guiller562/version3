@@ -16,7 +16,9 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-
+- task: PowerShell@2
+  inputs:
+    filePath: 'sonar-add-project-guid.ps1'
 
 #prinmer cosa AÑADIDA
 - task: UseDotNet@2
