@@ -16,14 +16,11 @@ steps:
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
   
-- task: AzurePowerShell@5
-  inputs:
-    azureSubscription: 'Azure subscription 1(1)(af26b6f8-8737-4db4-b123-9bc7c535a5f0)'
-    ScriptType: 'FilePath'
-    ScriptPath: 'sonar-add-project-guid.ps1'
-    workingDirectory: 'version3'
 
-# ... (el resto de tus pasos de canalización)
+- task: PowerShell@2
+  inputs:
+    filePath: 'sonar-add-project-guid.ps1'
+    workingDirectory: 'version3'
 
 #prinmer cosa AÑADIDA
 - task: UseDotNet@2
